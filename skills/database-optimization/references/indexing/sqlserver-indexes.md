@@ -1,0 +1,2 @@
+# SQL Server indexes
+Inspect sys.indexes, sys.index_columns, sys.dm_db_index_usage_stats and query plans; DMVs may reset and need permissions. Evaluate clustered/nonclustered keys, INCLUDE, filtered indexes, columnstore for suitable analytics and key lookup costs. Missing index DMVs provide suggestions, not complete designs. Protect constraint indexes and account for clustered key width. Check actual IO, parameter sensitivity, statistics and write workload. Online/resumable operations depend on edition, version and index type; plan locks, log growth and rollback.

@@ -1,0 +1,2 @@
+# Covering indexes
+Cover a frequent narrow projection when it measurably avoids table lookups. PostgreSQL and SQL Server support INCLUDE for non-key columns; PostgreSQL index-only scans also depend on visibility map state. InnoDB secondary indexes include the primary key; MySQL covering usually uses indexed columns rather than INCLUDE. SQLite can cover queries with indexed columns. Avoid wide or frequently updated payload columns. Compare index size, write cost, heap/table fetches and actual plans.

@@ -1,0 +1,2 @@
+# SQLite indexes
+Inspect PRAGMA index_list, index_xinfo and foreign_key_list for the relevant table; use EXPLAIN QUERY PLAN for scans, searches, covering access and temporary sorts. Evaluate composite, partial and expression indexes against supported version and predicate matching. Child foreign key indexes may improve parent updates/deletes. Account for single-writer behavior and file size; index creation can block writes. Consider existing autoindexes and constraint dependencies. Use approved maintenance only; do not run ANALYZE or PRAGMA optimize as read-only diagnostics.

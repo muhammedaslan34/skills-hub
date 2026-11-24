@@ -42,5 +42,9 @@ description: Detect, prevent, diagnose and optimize database query performance, 
 - Writes, transactions, pooling and caching: references/runtime.md
 - Testing and reporting: references/validation.md
 
+## Mandatory index audit
+When reviewing schema or hot queries, inventory existing indexes and constraints; group query fingerprints by filters, joins, ordering and frequency. Review missing, composite, covering, partial, expression, redundant and unused index candidates, including foreign key lookups. Check selectivity, column order, write overhead, index size, statistics and execution plans. A sequential scan can be optimal. Do not create indexes solely because a column appears in a filter; do not drop indexes solely because usage counters are zero.
+Use references/indexing/index-fundamentals.md as the entry point, then relevant specialized guides and engine references. Use scripts/ only after verifying version, privileges, environment and authorization. All scripts are read-only diagnostics; never install extensions or alter settings automatically. For migrations load references/indexing/safe-index-migrations.md, prepare rollout and rollback, and obtain explicit authorization before applying production changes.
+
 ## Finding format
 For each finding include severity, file:line, evidence, affected workload, query growth, proposed fix, semantic risks, validation and measured results (or explicitly not measured). Prioritize observed impact and correctness over speculative improvements. Report skipped checks and why.
